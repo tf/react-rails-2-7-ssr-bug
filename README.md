@@ -1,24 +1,15 @@
-# README
+Reproduction case for https://github.com/reactjs/react-rails/issues/1276.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+cd react-rails-2-7-ssr-bug
+bundle install
+bin/rails s
+```
 
-Things you may want to cover:
+Visit '/' to render
+https://github.com/tf/react-rails-2-7-ssr-bug/blob/main/app/views/test/index.html.erb
+and get error of the form:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+TypeError: Cannot read properties of undefined (reading 'version')
+```
